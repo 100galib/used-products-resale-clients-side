@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeBanner = () => {
     return (
@@ -10,7 +11,7 @@ const HomeBanner = () => {
                         <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Get Your Dream Come true</h1>
                         <p className="mb-5">With BD Motors Entertainer You can get to your dream faster. Because we have the most used second hand bike on bangladesh</p>
-                        <button className="btn btn-primary">Choose Your Ride</button>
+                        <Link to={'/allCategory'}><button className="btn btn-primary">Choose Your Ride</button></Link>
                         </div>
                     </div>
                 </div>
@@ -26,7 +27,7 @@ const HomeBanner = () => {
                         <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Long Run Support, When Your need</h1>
                         <p className="mb-5">BD Motors Entertainer give you the premium services. Which will fill like a pro.</p>
-                        <button className="btn btn-primary">Choose Your Ride</button>
+                        <Link to={'/allCategory'}><button className="btn btn-primary">Choose Your Ride</button></Link>
                         </div>
                     </div>
                 </div>
@@ -42,7 +43,7 @@ const HomeBanner = () => {
                         <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Get Celebrated BD Motors Entertainer</h1>
                         <p className="mb-5">No faking, No delay, No Dream Just go to Real and Celebrate with BD Motors Entertainer</p>
-                        <button className="btn btn-primary">Choose Your Ride</button>
+                        <Link to={'/allCategory'}><button className="btn btn-primary">Choose Your Ride</button></Link>
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,8 @@ import { FaCheckCircle } from "react-icons/fa";
 const SingleAdvertize = ({alldata, setShowModal}) => {
     const {image, name, location, reSalePrice ,originalPrice, yearofUse ,postTime, sellerName} = alldata;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl my-6">
-        <figure><img src={image} alt="Shoes" /></figure>
+        <div className="card shadow-xl my-6">
+        <figure><img className='h-80' src={image} alt="Advertize" /></figure>
         <div className="card-body">
             <h1>This is Advertize</h1>
             <h2 className="card-title">{name}</h2>

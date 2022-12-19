@@ -3,6 +3,7 @@ import Error from "../Common/Error/Error";
 import Main from "../Common/Main/Main";
 import AllBuyers from "../Pages/All Buyers/AllBuyers";
 import AllSellers from "../Pages/All Sellers/AllSellers";
+import AllCategories from "../Pages/AllCategories/AllCategories";
 import Blog from "../Pages/Blog/Blog";
 import BuyerRoutes from "../Pages/BuyerPage/BuyerRoutes/BuyerRoutes";
 import Category from "../Pages/Category/Category";
@@ -44,6 +45,10 @@ export const  routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/allCategory',
+                element: <AllCategories></AllCategories>
             }
         ]
     },

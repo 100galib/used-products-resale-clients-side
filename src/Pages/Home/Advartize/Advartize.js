@@ -16,9 +16,9 @@ const Advartize = () => {
     return (
         <div>
             <div>
-            {myProduct.length > 0 ? <h1 className='text-3xl font-bold text-center my-5'>Advertize Section</h1> : ''}
+                {myProduct.length > 0 ? <h1 className='text-3xl font-bold text-center my-5'>Advertize Section</h1> : ''}
             </div>
-            <div  className='flex justify-center gap-9 my-9'>
+            <div  className='grid grild-cols-1 gap-6 lg:grid-cols-3 mx-16'>
                 {myProduct.length > 0 ? 
                 myProduct.map(alldata => <SingleAdvertize key={alldata._id} alldata={alldata}></SingleAdvertize>)
                 : 
