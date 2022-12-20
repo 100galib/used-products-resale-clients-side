@@ -1,18 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loader from '../../../Common/Loader/Loader';
 import SingleAdvertize from './SingleAdvertize';
 
 const Advartize = () => {
     const url = 'https://b612-used-products-resale-server-side-100galib.vercel.app/advertize';
 
-    const {data: myProduct = []} = useQuery({
-        queryKey: ['Category'],
+    const {data: myProduct = [], isLoading} = useQuery({
+        queryKey: ['advertize'],
         queryFn: async() => {
             const res = await fetch(url);
             const data = res.json();
             return data;
         }
     })
+    if(isLoading){
+        return <Loader></Loader>
+    }
     return (
         <div>
             <div>

@@ -8,7 +8,7 @@ const Category = () => {
     const [showModl, setShowModal] = useState(null);
     return (
         <div>
-            <div className='flex flex-col justify-center items-center my-9'>
+            <div className='flex flex-col lg:flex-row justify-around px-9 my-9'>
                 {
                     spCategoryData.map(singleCat => <SingleCategory key={singleCat._id} alldata={singleCat} setShowModal={setShowModal}></SingleCategory>)
                 }
