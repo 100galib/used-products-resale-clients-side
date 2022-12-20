@@ -6,7 +6,7 @@ const SingleCategory = ({alldata, setShowModal}) => {
     const {_id, image, name, location, reSalePrice, originalPrice, yearofUse, postTime, sellerName} = alldata;
 
     const setToWishList = (id) => {
-            fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/Category/${id}`, {
+            fetch(`https://used-products-resale-server-side-taupe.vercel.app/Category/${id}`, {
             method: 'PUT',
         })
         .then(res => res.json())

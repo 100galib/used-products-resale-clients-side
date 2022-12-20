@@ -25,7 +25,7 @@ const Modal = ({showModl, setShowModal}) => {
             meeting,
             picture: image
         }
-        fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/bookins', {
+        fetch('https://used-products-resale-server-side-taupe.vercel.app/bookins', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

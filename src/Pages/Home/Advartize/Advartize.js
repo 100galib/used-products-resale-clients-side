@@ -6,7 +6,7 @@ import SingleAdvertize from './SingleAdvertize';
 
 const Advartize = () => {
     const [showModl, setShowModal] = useState(null);
-    const url = 'https://b612-used-products-resale-server-side-100galib.vercel.app/advertize';
+    const url = 'https://used-products-resale-server-side-taupe.vercel.app/advertize';
 
     const {data: myProduct = [], isLoading} = useQuery({
         queryKey: ['advertize'],

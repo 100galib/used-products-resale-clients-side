@@ -7,7 +7,7 @@ import Modal from '../Category/Modal'
 
 const AllCategories = () => {
     const [showModl, setShowModal] = useState(null);
-    const url = 'http://localhost:5000/Category';
+    const url = 'https://used-products-resale-server-side-taupe.vercel.app/Category';
 
     const {data: allCategory = [], isLoading} = useQuery({
         queryKey: ['Category'],

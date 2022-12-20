@@ -37,7 +37,7 @@ const googleLogin = () => {
 
 const userToDatabase = (email, displayname, role="Buyer") => {
     const users = {email, displayname, role};
-    fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/users', {
+    fetch('https://used-products-resale-server-side-taupe.vercel.app/users', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

@@ -25,7 +25,7 @@ const NewModal = ({showModl, setShowModal}) => {
             meeting,
             picture: image
         }
-        fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/wishList', {
+        fetch('https://used-products-resale-server-side-taupe.vercel.app/wishList', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

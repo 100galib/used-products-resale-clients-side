@@ -6,13 +6,13 @@ const AllSellers = () => {
     const {data: allSeller = [], refetch} = useQuery({
         queryKey:['users'],
         queryFn: async() => {
-            const res = await fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/users/Seller');
+            const res = await fetch('https://used-products-resale-server-side-taupe.vercel.app/users/Seller');
             const data = res.json();
             return data;
         }
     })
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/users/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())
@@ -24,7 +24,7 @@ const AllSellers = () => {
         })
     }
     const makeVerified = (email) => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/Category?email=${email}`, {
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/Category?email=${email}`, {
             method: 'PUT',
         })
         .then(res => res.json())

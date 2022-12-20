@@ -32,7 +32,7 @@ const Registration = () => {
 
     const userToDatabase = (email, displayname, role) => {
         const users = {email, displayname, role};
-        fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/users', {
+        fetch('https://used-products-resale-server-side-taupe.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const Registration = () => {
     }
 
     const getUserToken = email => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/jwt?email=${email}`)
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/jwt?email=${email}`)
         .then(res => res.json())
         .then(data => {
             if(data.accessToken){

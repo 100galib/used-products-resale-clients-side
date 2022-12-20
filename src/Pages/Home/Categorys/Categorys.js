@@ -7,7 +7,7 @@ const Categorys = () => {
     const {data: catagories = []} = useQuery({
         queryKey:['categories'],
         queryFn: async() => {
-            const res = await fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/categories');
+            const res = await fetch('https://used-products-resale-server-side-taupe.vercel.app/categories');
             const data = res.json();
             return data;
         }

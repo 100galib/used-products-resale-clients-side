@@ -8,7 +8,7 @@ const AddAProduct = () => {
     const {data: getSeller = []} = useQuery({
         queryKey:['users'],
         queryFn: async() => {
-            const res = await fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/userrole?email=${user?.email}`);
+            const res = await fetch(`https://used-products-resale-server-side-taupe.vercel.app/userrole?email=${user?.email}`);
             const data = res.json();
             return data;
         }
@@ -60,7 +60,7 @@ const AddAProduct = () => {
             role,
             status,
         }
-        fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/Category', {
+        fetch('https://used-products-resale-server-side-taupe.vercel.app/Category', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

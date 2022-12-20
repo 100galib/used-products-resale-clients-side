@@ -6,13 +6,13 @@ const AllBuyers = () => {
     const {data: allbuyer = [], refetch} = useQuery({
         queryKey:['users'],
         queryFn: async() => {
-            const res = await fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/users/Buyer');
+            const res = await fetch('https://used-products-resale-server-side-taupe.vercel.app/users/Buyer');
             const data = res.json();
             return data;
         }
     })
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/users/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())

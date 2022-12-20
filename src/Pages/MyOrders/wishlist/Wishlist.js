@@ -5,7 +5,7 @@ import { AuthContex } from '../../../Contex/Authprovider';
 
 const Wishlist = () => {
     const {user} = useContext(AuthContex);
-    const url = `https://b612-used-products-resale-server-side-100galib.vercel.app/bookins?email=${user?.email}`;
+    const url = `https://used-products-resale-server-side-taupe.vercel.app/bookins?email=${user?.email}`;
 
     const {data: allbookings = []} = useQuery({
         queryKey: ['bookins', user?.email],

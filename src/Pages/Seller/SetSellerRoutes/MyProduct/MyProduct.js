@@ -5,7 +5,7 @@ import { AuthContex } from '../../../../Contex/Authprovider';
 
 const MyProduct = () => {
     const {user} = useContext(AuthContex);
-    const url = `https://b612-used-products-resale-server-side-100galib.vercel.app/Category?email=${user.email}`;
+    const url = `https://used-products-resale-server-side-taupe.vercel.app/Category?email=${user.email}`;
 
     const {data: myProduct = [], refetch} = useQuery({
         queryKey: ['Category', user?.email],
@@ -16,7 +16,7 @@ const MyProduct = () => {
         }
     })
    const postProduct = (product) => {
-    fetch('https://b612-used-products-resale-server-side-100galib.vercel.app/advertize', {
+    fetch('https://used-products-resale-server-side-taupe.vercel.app/advertize', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -32,7 +32,7 @@ const MyProduct = () => {
    }       
 
     const advertiseHandler = (id) => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/Category/${id}`, {
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/Category/${id}`, {
             method: 'PUT',
         })
         .then(res => res.json())
@@ -43,7 +43,7 @@ const MyProduct = () => {
         })
     }
     const deleteProduct = (id) => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/Category/${id}`, {
+        fetch(`https://used-products-resale-server-side-taupe.vercel.app/Category/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())
