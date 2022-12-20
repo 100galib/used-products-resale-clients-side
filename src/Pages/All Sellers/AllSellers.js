@@ -12,7 +12,7 @@ const AllSellers = () => {
         }
     })
     const deleteProduct = (id) => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/userrole/${id}`, {
+        fetch(`http://localhost:5000/users/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())

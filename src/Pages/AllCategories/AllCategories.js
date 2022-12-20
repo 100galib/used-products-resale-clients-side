@@ -1,8 +1,12 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../Common/Loader/Loader';
+import { useState } from 'react';
+import AllSIngleCategories from './AllSIngleCategories';
+import Modal from '../Category/Modal'
 
 const AllCategories = () => {
+    const [showModl, setShowModal] = useState(null);
     const url = 'http://localhost:5000/Category';
 
     const {data: allCategory = [], isLoading} = useQuery({
@@ -23,7 +27,12 @@ const AllCategories = () => {
                     <h1 className='text-right pt-20 font-bold text-black text-6xl'>Get All Bikes</h1>
                 </div>
             </div>
-            <div className='my-6'>this is text : {allCategory.length}</div>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center'>
+                {
+                    allCategory.map(everyItem => <AllSIngleCategories key={everyItem._id} everyItem={everyItem} setShowModal={setShowModal}></AllSIngleCategories>)
+                }
+            </div>
+            {showModl && <Modal  showModl={showModl} setShowModal={setShowModal}></Modal>}
         </div>
     );
 };

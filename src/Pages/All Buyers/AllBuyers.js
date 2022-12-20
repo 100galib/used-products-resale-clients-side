@@ -12,7 +12,7 @@ const AllBuyers = () => {
         }
     })
     const deleteProduct = (id) => {
-        fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/userrole/${id}`, {
+        fetch(`http://localhost:5000/users/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())
@@ -39,7 +39,7 @@ const AllBuyers = () => {
                     </thead>
                     <tbody>
                         {
-                           allbuyer && allbuyer?.map((buyer) => <tr key={buyer._id}>
+                           allbuyer.map((buyer) => <tr key={buyer._id}>
                             <td>
                                
                             </td>

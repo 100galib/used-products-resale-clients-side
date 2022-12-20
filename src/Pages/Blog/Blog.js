@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='pl-20 grid grid-cols-1 lg:grid-cols-2'>
-            <div className="card my-3 card-compact w-96 bg-base-100 shadow-xl">
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 my-9 place-items-center'>
+            <div className="card w-96 min-h-full my-3 card-compact bg-base-100 shadow-xl">
                 <figure><img src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">What are the different ways to manage a state in a React application?</h2>
@@ -12,7 +12,7 @@ const Blog = () => {
                     <p>The third option is to use store state locally. It is useful when one component needs the state. Examples include a toggle button, a form, etc.</p>
                 </div>
             </div>
-            <div className="card my-3 card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 min-h-full my-3 card-compact bg-base-100 shadow-xl">
                 <figure><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">How does prototypical inheritance work?</h2>
@@ -23,7 +23,7 @@ const Blog = () => {
                     When you analyze the mechanism in this way, it's clear that, by default, JavaScript isn't "inheriting" by copying DOWN the chain, but rather delegating UP the chain. It's a completely different mechanism.</p>
                 </div>
             </div>
-            <div className="card my-3 card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 min-h-full my-3 card-compact bg-base-100 shadow-xl">
                 <figure><img src="https://images.unsplash.com/photo-1600933435972-e4a4a40a4abd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">What is a unit test? Why should we write unit tests?</h2>
@@ -34,7 +34,7 @@ const Blog = () => {
                     Unit testing is a component of test-driven development (TDD), a pragmatic methodology that takes a meticulous approach to building a product by means of continual testing and revision. This testing method is also the first level of software testing, which is performed before other testing methods such as integration testing. Unit tests are typically isolated to ensure a unit does not rely on any external code or functions. Testing can be done manually but is often automated.</p>
                 </div>
             </div>
-            <div className="card my-3 card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 min-h-full my-3 card-compact bg-base-100 shadow-xl">
                 <figure><img src="https://images.unsplash.com/photo-1506526794364-ba711a0d97fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">React vs. Angular vs. Vue?</h2>

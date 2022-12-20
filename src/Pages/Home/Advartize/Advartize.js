@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useState } from 'react';
 import Loader from '../../../Common/Loader/Loader';
+import Modal from '../../Category/Modal';
 import SingleAdvertize from './SingleAdvertize';
 
 const Advartize = () => {
+    const [showModl, setShowModal] = useState(null);
     const url = 'https://b612-used-products-resale-server-side-100galib.vercel.app/advertize';
 
     const {data: myProduct = [], isLoading} = useQuery({
@@ -22,13 +24,14 @@ const Advartize = () => {
             <div>
                 {myProduct.length > 0 ? <h1 className='text-3xl font-bold text-center my-5'>Advertize Section</h1> : ''}
             </div>
-            <div  className='grid grild-cols-1 gap-6 lg:grid-cols-3 mx-16'>
+            <div  className='grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center'>
                 {myProduct.length > 0 ? 
-                myProduct.map(alldata => <SingleAdvertize key={alldata._id} alldata={alldata}></SingleAdvertize>)
+                myProduct.map(alldata => <SingleAdvertize key={alldata._id} alldata={alldata}  setShowModal={setShowModal}></SingleAdvertize>)
                 : 
                 ''
                 }
             </div>
+            {showModl && <Modal  showModl={showModl} setShowModal={setShowModal}></Modal>}
         </div>
     );
 };

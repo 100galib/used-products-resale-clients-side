@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const SingleAdvertize = ({alldata, setShowModal}) => {
     const {image, name, location, reSalePrice ,originalPrice, yearofUse ,postTime, sellerName} = alldata;
     return (
-        <div className="card shadow-xl my-6">
+        <div className="card w-96 shadow-xl my-6">
         <figure><img className='h-80' src={image} alt="Advertize" /></figure>
         <div className="card-body">
             <h1>This is Advertize</h1>
@@ -15,7 +15,7 @@ const SingleAdvertize = ({alldata, setShowModal}) => {
             <p>Year of Use: <span className='font-bold'>{yearofUse}</span></p>
             <p>Time of Post: <span className='font-bold'>{postTime}</span></p>
             <p>Owner: <span className='font-bold'>{sellerName} <FaCheckCircle className='text-info inline'></FaCheckCircle></span> </p>
-            <label htmlFor="category-modal" className="btn btn-primary">Book Now</label>
+            <label onClick={() => {setShowModal(alldata)}} htmlFor="category-modal" className="btn btn-primary">Book Now</label>
         </div>
     </div>
     );
