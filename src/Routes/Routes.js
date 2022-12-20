@@ -40,7 +40,7 @@ export const  routes = createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <PrivateRoutes><Category></Category></PrivateRoutes>,
-                loader: ({params}) => fetch(`https://b612-used-products-resale-server-side-100galib.vercel.app/Category/${params.id}`)
+                loader: ({params}) => fetch(`https://used-products-resale-server-side-taupe.vercel.app/Category/${params.id}`)
             },
             {
                 path: '/blog',
